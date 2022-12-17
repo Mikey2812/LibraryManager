@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8879C497-49CC-40DE-8BDF-4E1A1213B84F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CS464_E_INDIVIDUAL_PROJECT</RootNamespace>
+    <AssemblyName>CS464_E_INDIVIDUAL_PROJECT</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BLL_ChiTietPhieuMuon.cs" />
+    <Compile Include="BLL\BLL_DangNhap.cs" />
+    <Compile Include="BLL\BLL_DocGia.cs" />
+    <Compile Include="BLL\BLL_DoiMatKhau.cs" />
+    <Compile Include="BLL\BLL_NhanVien.cs" />
+    <Compile Include="BLL\BLL_NhaXuatBan.cs" />
+    <Compile Include="BLL\BLL_PhieuMuon.cs" />
+    <Compile Include="BLL\BLL_Sach.cs" />
+    <Compile Include="BLL\BLL_TheLoai.cs" />
+    <Compile Include="DAL\DAL_ChiTietPM.cs" />
+    <Compile Include="DAL\DAL_DangNhap.cs" />
+    <Compile Include="DAL\DAL_DocGia.cs" />
+    <Compile Include="DAL\DAL_DoiMatKhau.cs" />
+    <Compile Include="DAL\DAL_MuonTraSach.cs" />
+    <Compile Include="DAL\DAL_NhanVien.cs" />
+    <Compile Include="DAL\DAL_NhaXuatBan.cs" />
+    <Compile Include="DAL\DAL_Sach.cs" />
+    <Compile Include="DAL\DAL_TheLoai.cs" />
+    <Compile Include="DAL\LopDungChung.cs" />
+    <Compile Include="GUI\DANGNHAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DANGNHAP.Designer.cs">
+      <DependentUpon>DANGNHAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DOIMATKHAU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DOIMATKHAU.Designer.cs">
+      <DependentUpon>DOIMATKHAU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MUONTRASACH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MUONTRASACH.Designer.cs">
+      <DependentUpon>MUONTRASACH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NHAXUATBAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NHAXUATBAN.Designer.cs">
+      <DependentUpon>NHAXUATBAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QUANLYDOCGIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QUANLYDOCGIA.Designer.cs">
+      <DependentUpon>QUANLYDOCGIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QUANLYNHANVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QUANLYNHANVIEN.Designer.cs">
+      <DependentUpon>QUANLYNHANVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QUANLYSACH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QUANLYSACH.Designer.cs">
+      <DependentUpon>QUANLYSACH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QUANLYTHELOAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QUANLYTHELOAI.Designer.cs">
+      <DependentUpon>QUANLYTHELOAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\DANGNHAP.resx">
+      <DependentUpon>DANGNHAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DOIMATKHAU.resx">
+      <DependentUpon>DOIMATKHAU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MUONTRASACH.resx">
+      <DependentUpon>MUONTRASACH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NHAXUATBAN.resx">
+      <DependentUpon>NHAXUATBAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QUANLYDOCGIA.resx">
+      <DependentUpon>QUANLYDOCGIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QUANLYNHANVIEN.resx">
+      <DependentUpon>QUANLYNHANVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QUANLYSACH.resx">
+      <DependentUpon>QUANLYSACH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QUANLYTHELOAI.resx">
+      <DependentUpon>QUANLYTHELOAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data_Library.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data_Library_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Data_Library.mdf</DependentUpon>
+    </Content>
+    <None Include="img\FormMain.jpg" />
+    <None Include="HINHANH\Logo\up.png" />
+    <None Include="HINHANH\Logo\hello.jpg" />
+    <None Include="HINHANH\Logo\exit.jpg" />
+    <None Include="HINHANH\Logo\delete.png" />
+    <None Include="HINHANH\Logo\update.png" />
+    <None Include="HINHANH\Logo\add.png" />
+    <None Include="HINHANH\Logo\min.png" />
+    <None Include="HINHANH\Logo\max.png" />
+    <None Include="HINHANH\Logo\close.png" />
+    <None Include="HINHANH\Logo\exit.png" />
+    <None Include="HINHANH\Logo\User.png" />
+    <None Include="HINHANH\Logo\Login_logo.jpg" />
+    <None Include="HINHANH\Logo\Lock.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
